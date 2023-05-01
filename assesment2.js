@@ -13,35 +13,33 @@ const books = [
 //Create a function called getAvailableBooks that returns an array of all available
 //books.
 function getAvailableBooks(books) {
-    let c=[]
-    for (let i = 0; i < books.length; i++) {    
-    }
-   if (books.isAvailable===true) {
-    c.push(books[i])
+    const availableBooks = books.filter(book => book.isAvailable === true);
   
-    
-   }
-   return books
-}
+    return availableBooks;
+  }
+
 
 
 console.log(getAvailableBooks(books));
 
 //Create a function getBooksByAuthor that takes an author's name as an argument and
 //returns an array of all books by that author.
-function getBooksByAuthor(author) {
-    for (let x = 0; x < author.length; x++) {
-        if (x==="Homer") {    
-        }   
-    }
-    return x
-}
+function getBooksByAuthor(authorname) {
+    // Filter the books array to return only books by the given author
+    const booksByAuthor = books.filter(book => book.author === authorname);
+    
+    return booksByAuthor;
+  }
+  const booksByAuthor = getBooksByAuthor('Homer');
+
+  console.log(booksByAuthor);
 console.log(books.author);
 
 //Create a function addNewBook that takes a book object as an argument and adds it
 //to the library, ensuring that the new book has all required properties (title, author,
 //publicationYear, and isAvailable).
 function addNewBook(book) {
+  
     books[book]={
         title:"Born a crime",author:"Trevor Noah",publicationYear:2004,isAvailable:true
     }
