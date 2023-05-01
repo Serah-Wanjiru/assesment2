@@ -31,15 +31,10 @@ console.log(getAvailableBooks(books));
 //returns an array of all books by that author.
 function getBooksByAuthor(author) {
     for (let x = 0; x < author.length; x++) {
-        if (x==="Homer") {
-            
-        }
-       
-        
+        if (x==="Homer") {    
+        }   
     }
     return x
-    
-
 }
 console.log(books.author);
 
@@ -72,3 +67,4 @@ function returnBook(title) {
     }
     
 }
+console.log(books.title);
